@@ -1,0 +1,25 @@
+@import url("https://use.typekit.net/jfq2nkn.css");
+  
+
+@mixin bold {
+  font-family:  "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  @include bold;
+}
+
+html {
+    font-size:14px;
+
+}
+
+@media screen and (min-width: 500px) {
+    html {
+        font-size: calc( 14px + 8 * ((100vw - 500px) / 1500));
+    }
+}

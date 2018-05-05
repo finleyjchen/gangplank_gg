@@ -1,6 +1,6 @@
-import React from 'react';
-
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../css/style.css'
 
 class NavBar extends React.Component {
 
@@ -9,14 +9,24 @@ class NavBar extends React.Component {
         return (
             <header>
 
-                <div className="container-fluid">
-                        <h1 className=" text-center">Gangplank.gg</h1>
-                        <h3 className=" text-center text-muted">by inlorfaze</h3>
+                <div className="container-fluid bg-dark text-white">
+                    <div className="row no-gutters">
+                        <div className="col-md-8 offset-md-2">
+                        <Link to="/" className="title-link">
+                        <h3 className="">Gangplank.gg</h3>
+                        <h6 className="text-muted">by inlorfaze</h6>
+                        </Link>
 
                         <ul className="nav-links">
-                            <li><a href="">resources</a></li>
+                            <li><Link to="/guide">Guide</Link></li>
+                            <li><Link to="/streams">Streams</Link></li>
+                            <li><Link to="/videos">Videos</Link></li>
+                            <li><Link to="/posts">Posts</Link></li>
+
                         </ul>
+                        </div>
                     </div>
+                </div>
 
             </header>
         )
